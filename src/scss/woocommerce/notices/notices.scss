@@ -1,0 +1,38 @@
+@import '../../variables';
+
+.woocommerce-notices-wrapper {
+	margin-bottom: 20px;
+}
+
+.woocommerce-message,
+.woocommerce-error {
+	padding: 20px;
+	border-radius: 8px;
+}
+
+.woocommerce {
+	&-message {
+		display: flex;
+		justify-content: space-between;
+		background-color: $main;
+		color: $white;
+
+		a {
+			color: inherit;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&-error {
+		background-color: rgb(255, 149, 149);
+		margin-bottom: 20px;
+
+		a {
+			color: $white;
+		}
+	}
+}

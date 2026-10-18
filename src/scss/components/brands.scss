@@ -1,0 +1,52 @@
+@import '../variables';
+
+.brands {
+	&__swiper {
+		user-select: none;
+
+		&--slide {
+			width: 180px;
+		}
+	}
+
+	&__navigation {
+		display: flex;
+		justify-content: center;
+		margin-top: 44px;
+		padding-bottom: 10px;
+		gap: 12px;
+
+		.swiper-button {
+			&-prev,
+			&-next {
+				position: initial !important;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.brands {
+		overflow: hidden;
+
+		&__swiper {
+			overflow: initial !important;
+
+			.swiper-wrapper {
+				overflow: initial;
+			}
+
+			&--slide {
+				min-width: 180px !important;
+
+				img {
+					min-width: 180px !important;
+				}
+			}
+		}
+
+		&__navigation.navigation {
+			display: none;
+		}
+	}
+}

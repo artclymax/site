@@ -1,0 +1,27 @@
+@import '../../variables';
+@import '../../main/mixins';
+
+.breadcrumbs {
+	margin-bottom: 40px;
+	margin-top: 10px;
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	a,
+	span {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 19.6px;
+		text-align: left;
+		color: $dark;
+	}
+}
+
+@media (max-width: 1280px) {
+	.breadcrumbs {
+		margin-bottom: 25px;
+	}
+}

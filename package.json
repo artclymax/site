@@ -1,0 +1,42 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "site",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --watch --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "ftp": "node ftp-deploy.js",
+    "stylelint": "stylelint ./src/scss/**/*.scss --customSyntax postcss-scss --fix",
+    "eslint": "eslint ./src/js --fix",
+    "lint": "npm run lint:prettier",
+    "lint:prettier:write": "prettier --write \"**/*.{js,html,json}\""
+  },
+  "devDependencies": {
+    "@babel/core": "~7.26",
+    "@babel/plugin-proposal-class-properties": "~7.18",
+    "@babel/preset-env": "~7.26",
+    "@prettier/plugin-php": "~0.22",
+    "babel-eslint": "~10.1",
+    "babel-loader": "~9.2",
+    "css-loader": "~7.1",
+    "eslint": "~9.20",
+    "eslint-config-prettier": "~10.0",
+    "eslint-config-wordpress": "~2.0",
+    "eslint-plugin-prettier": "~5.2",
+    "file-loader": "~6.2",
+    "ftp-deploy": "~2.4",
+    "install": "~0.13",
+    "mini-css-extract-plugin": "~2.9",
+    "node-sass": "~9.0",
+    "prettier": "~3.5",
+    "sass-loader": "~16.0",
+    "style-loader": "~4.0",
+    "stylelint": "~16.14",
+    "stylelint-config-standard": "~37.0",
+    "stylelint-config-standard-scss": "~14.0",
+    "webpack": "~5.98",
+    "webpack-cli": "~6.0",
+    "webpack-merge": "~6.0.1"
+  }
+}

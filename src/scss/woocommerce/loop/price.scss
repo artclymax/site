@@ -1,0 +1,37 @@
+@import '../../variables';
+
+.price {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	&--regular {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 130%;
+		text-transform: uppercase;
+		text-decoration: line-through;
+		color: #9f9f9f;
+	}
+
+	&--on_sale {
+		font-weight: 700;
+		font-size: 26px;
+		line-height: 130%;
+		text-transform: uppercase;
+	}
+}
+
+@media screen and (max-width: $tablet_min_width) {
+	.price {
+		flex-direction: column;
+
+		&--regular {
+			text-align: start;
+		}
+
+		&--on_sale {
+			text-align: start;
+		}
+	}
+}

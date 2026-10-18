@@ -1,0 +1,134 @@
+@import '../variables';
+
+:root {
+	--container-padding: #{$container_padding};
+	--container-max-width: #{$container_max_width};
+}
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+body {
+	font-family: var(--theme-main-font);
+	font-weight: 400;
+
+	@include font-data('body', 16);
+
+	background-color: $bg-color;
+	color: $text-color;
+	-webkit-font-smoothing: antialiased;
+
+	&.rtl {
+		direction: rtl;
+	}
+
+	& > .wrapper {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		.block__footer {
+			margin-top: auto;
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--theme-second-font);
+	color: $text-color;
+	margin: 0;
+	font-weight: 900;
+}
+
+p {
+	margin: 0;
+}
+
+ul,
+ol,
+nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+main {
+	background-repeat: round;
+	background-position: center;
+	background-size: contain;
+
+	& > * {
+		&:first-child {
+			padding-top: 127px;
+
+			@media screen and (max-width: $tablet_max_width) {
+				padding-top: 77px;
+			}
+
+			/* @media screen and (max-width: $tablet_min_width) {
+				padding-top: 161px;
+			}
+
+			// @media screen and (max-width: $mobile_max_width) {
+			// 	padding-top: 139px;
+			// } */
+		}
+	}
+}
+
+/*
+ * wpseo-frontend-inspector
+ */
+
+[style='position: relative; z-index: 99998;'] {
+	display: none !important;
+}
+
+/*
+ * Pixel perfect mu-plugin
+ */
+
+.pp__images img {
+	max-width: initial !important;
+}
+
+@include respond-to(tablet) {
+	:root {
+		--container-padding: #{$container_padding_tablet};
+		--container-max-width: #{$container_max_width_tablet};
+	}
+}
+
+@include respond-to(mobile) {
+	:root {
+		--container-padding: #{$container_padding_mobile};
+	}
+}

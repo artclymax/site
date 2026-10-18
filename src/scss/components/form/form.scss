@@ -1,0 +1,122 @@
+@import '../../variables';
+@import '../../main/mixins';
+
+.feedback-form {
+	display: flex;
+	flex-direction: column;
+
+	p {
+		display: flex;
+		gap: 24px;
+		margin-top: 44px;
+		width: 100%;
+	}
+
+	input[type='text'],
+	input[type='tel'],
+	input[type='email'],
+	textarea {
+		width: 400px;
+		height: 60px;
+		border-radius: 6px;
+		padding: 20px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 130%;
+	}
+
+	textarea {
+		height: 100px;
+	}
+
+	input,
+	button,
+	textarea {
+		border: 1px solid #d6d6d6;
+		outline: none;
+		box-shadow: none;
+	}
+}
+
+.warning {
+	font-size: 14px;
+	color: #ff7979;
+	visibility: hidden;
+
+	&--show {
+		visibility: visible;
+	}
+}
+
+.loader {
+	position: absolute;
+	left: 75%;
+	width: 20px;
+	height: 20px;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	border-top-color: #fff;
+	border-radius: 50%;
+	animation: spin 1s linear infinite;
+	opacity: 0;
+}
+
+.btn.loading .loader {
+	opacity: 1;
+}
+
+.lol-field {
+	display: none;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+label {
+	cursor: pointer;
+	display: flex;
+	gap: 12px;
+
+	a {
+		color: $text-color;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.feedback-form {
+		gap: 10px;
+		margin-top: 24px;
+		justify-content: center;
+		flex-direction: column;
+
+		input[type='text'],
+		input[type='tel'] {
+			width: 320px;
+		}
+
+		.btn {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.feedback-form {
+		input[type='text'],
+		input[type='tel'] {
+			width: 100%;
+		}
+
+	}
+}

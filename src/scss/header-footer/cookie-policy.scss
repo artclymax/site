@@ -1,0 +1,77 @@
+@import '../variables';
+
+.cookie {
+	&__policy {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+		padding: 20px;
+		background-color: #fff;
+		border-top: 1px solid #e1e1e1;
+
+		&--container {
+			max-width: 955px;
+			margin: 0 auto;
+		}
+
+		&--content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+		}
+
+		&--text {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 130%;
+
+			a {
+				color: $main;
+				text-decoration: underline;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		&--btns {
+			display: flex;
+			gap: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet_min_width) {
+	.cookie {
+		&__policy {
+			&--content {
+				flex-direction: column;
+			}
+
+			&--text {
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 130%;
+
+				a {
+					color: $main;
+					text-decoration: underline;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+
+			&--btns {
+				width: 100%;
+				gap: 16px;
+				justify-content: center;
+			}
+		}
+	}
+}

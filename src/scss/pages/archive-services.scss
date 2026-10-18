@@ -1,0 +1,27 @@
+@import '../variables';
+
+.archive-page-services {
+	.description {
+		padding-bottom: 60px;
+
+		h2 {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 130%;
+			letter-spacing: 0%;
+			text-transform: uppercase;
+			margin-bottom: 14px;
+		}
+
+		p {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			letter-spacing: 0%;
+
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+	}
+}

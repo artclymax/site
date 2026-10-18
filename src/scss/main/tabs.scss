@@ -1,0 +1,32 @@
+.tabs {
+
+  &--head {
+    &-label {
+      &.active {
+        .chips--item {
+          color: #fff;
+          background: #2B2933;
+        }
+      }
+    }
+  }
+
+  &--item {
+    display: none;
+    animation: tab-opacity 0.8s;
+    transition: 0.2s opacity;
+    &.active {
+      display: block;
+    }
+  }
+
+}
+
+@keyframes tab-opacity{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

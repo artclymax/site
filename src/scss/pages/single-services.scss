@@ -1,0 +1,27 @@
+@import '../variables';
+
+.single__services {
+	&--content {
+		p {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			margin-bottom: 12px;
+		}
+	}
+
+	&--img {
+		max-width: 588px;
+		max-height: 459px;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	.single-services {
+		&__list {
+			display: none;
+		}
+	}
+}

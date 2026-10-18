@@ -1,0 +1,121 @@
+@import '../variables';
+
+.catalog__nav {
+	position: relative;
+
+	&:hover {
+		.category__menu {
+			display: flex;
+		}
+	}
+}
+
+.category__menu {
+	display: none;
+	flex-direction: column;
+	width: 670px;
+	gap: 4px;
+	padding: 30px 0 20px 5px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 78vh;
+	position: relative;
+
+	&--container {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: white;
+		z-index: 9999;
+	}
+
+	> li {
+		padding: 14px 9px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+		background: #f2f2f2;
+		width: 282px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+
+		&.menu-item-has-children {
+			&::after {
+				content: '';
+				width: 15px;
+				height: 12px;
+				background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 0.5L5.47842 6.08907C5.78049 6.46606 5.76989 7.00509 5.45321 7.3699L1 12.5' stroke='%23282828' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+		}
+
+		> a {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 130%;
+			color: $text-color;
+		}
+
+		.sub-menu {
+			display: none;
+			flex-direction: column;
+			gap: 12px;
+
+			> li {
+				> a {
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 130%;
+					color: $text-color;
+					display: inline-block;
+					width: 100%;
+
+					&:hover {
+						color: $main;
+					}
+				}
+
+				&.second-parent {
+					.sub-menu {
+						left: 0;
+						position: relative;
+						height: auto;
+						padding-top: 12px;
+						width: auto;
+					}
+				}
+			}
+		}
+
+		&:hover {
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+			box-shadow: 0 2px 7.8px 0 #00000026;
+			background-color: $white;
+			border-left: 2px solid $main;
+
+			&:has(.sub-menu) {
+				color: red;
+			}
+
+			> a {
+				color: $main;
+			}
+
+			.sub-menu {
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 0;
+				left: 280px;
+				padding-top: 10px;
+				padding-left: 20px;
+				padding-bottom: 40px;
+				height: auto;
+				width: 370px;
+			}
+		}
+	}
+}

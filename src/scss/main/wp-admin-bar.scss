@@ -1,0 +1,38 @@
+body {
+  &.admin-bar {
+    .block__header {
+      &:not(.block__header--hide) {
+        top: 32px;
+      }
+    }
+  }
+}
+
+@include respond-to(desktop-middle) {
+
+  /*
+   * Hide admin bar
+   */
+
+  body.admin-bar {
+    margin-top: -32px;
+    top: 0 !important;
+    #wpadminbar {
+      display: none;
+    }
+    .block__header {
+      &:not(.block__header--hide) {
+        top: 0;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 782px) {
+
+  body.admin-bar {
+    margin-top: -46px;
+  }
+
+}

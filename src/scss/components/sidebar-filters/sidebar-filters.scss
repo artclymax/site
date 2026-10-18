@@ -1,0 +1,99 @@
+@import '../../variables';
+
+.sidebar-filters {
+	padding: 16px;
+	border-radius: 6px;
+	box-shadow: 0 0 7px 4px #00000014;
+
+	.filters-title {
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 28px;
+		margin-bottom: 24px;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.wpc-wrap-icons {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 23px;
+		font-family: var(--theme-main-font);
+	}
+
+	.wpc-posts-found {
+		display: none;
+	}
+
+	.widget-title {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 25px;
+		color: $text-color;
+		justify-content: start;
+
+		input[type='checkbox'] {
+			margin: 0;
+		}
+	}
+
+	.wpc-checkbox-item {
+		.wpc-filter-link {
+			color: $text-color;
+		}
+	}
+
+	.wpc-filters-main-wrap .wpc-filters-labels li.wpc-term-item {
+		label {
+			border: none;
+
+			&:hover {
+				.wpc-filter-label-wrapper {
+					> * {
+						color: white;
+					}
+				}
+			}
+
+			.wpc-filter-label-wrapper {
+				> * {
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 22px;
+					color: $text-color;
+				}
+			}
+		}
+	}
+
+	.wpc-filters-range-wrapper {
+		input[type='number'] {
+			max-width: 108px;
+			height: 25px;
+			border-radius: 3px;
+			padding-left: 10px;
+			border: 1px solid $main;
+		}
+	}
+
+	.wpc-filter-layout-submit-button {
+		flex-direction: column;
+		gap: 16px;
+
+		.wpc-filters-submit-button,
+		.wpc-filters-reset-button {
+			width: 100%;
+			height: 46px;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 23px;
+			border: 1px solid #1272a9;
+		}
+
+		.wpc-filters-reset-button {
+			color: $main;
+		}
+	}
+}

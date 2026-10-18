@@ -1,0 +1,18 @@
+@import '../variables';
+
+.liczenzii {
+	&__img {
+		max-height: 391px;
+		object-fit: contain;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.liczenzii {
+		&__img {
+			max-height: 471px;
+		}
+	}
+
+}

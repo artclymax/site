@@ -1,0 +1,288 @@
+@import '../variables';
+@import '../main/mixins';
+
+.checkout {
+	.order__received {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 32px;
+
+		&--img {
+			img {
+				width: 102px;
+				height: auto;
+			}
+		}
+
+		&--content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			align-self: center;
+
+			&-title {
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 130%;
+				margin-bottom: 24px;
+
+				.order__number {
+					color: $main;
+				}
+			}
+
+			&-subtitle {
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 21.09px;
+				text-align: center;
+
+				.phones {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 10px;
+					margin-top: 10px;
+				}
+
+				.phone {
+					display: flex;
+
+					a {
+						font-weight: 700;
+						font-size: 18px;
+						line-height: 130%;
+						color: $text-color;
+					}
+
+					img {
+						width: 24px;
+						height: 24px;
+					}
+				}
+			}
+		}
+	}
+
+	&__client_data {
+		&--wrapper {
+			box-shadow: 0 0 15px 0 #0000001a;
+			border-radius: 10px;
+			padding: 40px 30px;
+			background-color: #fff;
+
+			.woocommerce-billing-fields__field-wrapper {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 20px;
+			}
+
+			input[type='text'],
+			input[type='tel'],
+			input[type='email'] {
+				width: 354px;
+				height: 56px;
+				border-radius: 6px;
+				padding-left: 16px;
+				border: 1px solid#C6C6C6;
+			}
+
+			input[type='text']#order_comments {
+				width: 100%;
+			}
+
+			#billing_country_field {
+				display: none;
+			}
+
+			.woocommerce-additional-fields {
+				margin-top: 40px;
+			}
+		}
+
+		&--title {
+			font-size: 24px;
+			font-weight: 500;
+			line-height: 33.6px;
+			margin-bottom: 24px;
+		}
+	}
+
+	&__review_order {
+		box-shadow: 0 0 15px 0 #0000001a;
+		border-radius: 10px;
+		padding: 40px 30px;
+		background-color: #fff;
+
+		table.woocommerce-checkout-review-order-table {
+			tr.shipping {
+				margin-bottom: 20px;
+				display: flex;
+				flex-direction: column;
+
+				th {
+					text-align: start;
+				}
+			}
+
+			tr.order-total {
+				td {
+					display: flex;
+					justify-content: space-between;
+					min-width: 150px;
+				}
+			}
+
+			.order-total {
+				th {
+					font-weight: 500;
+					font-size: 18px;
+					line-height: 130%;
+					text-align: left;
+				}
+
+				td {
+					font-weight: 500;
+					font-size: 24px;
+					line-height: 130%;
+					color: #ee0025;
+					text-align: right;
+				}
+			}
+		}
+
+		.btn {
+			margin-top: 48px;
+			width: 100%;
+		}
+
+		.place-order {
+			margin-top: 20px;
+
+			.woocommerce-terms-and-conditions-wrapper {
+				font-size: 14px;
+
+				.validate-required {
+					margin-top: 10px;
+				}
+
+				a {
+					color: $dark;
+					text-decoration: underline;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+	.checkout-inline-error-message {
+		display: none;
+	}
+}
+
+.custom-radio {
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+	display: inline-block;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+.custom-radio:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 16px; /* Размер кольца */
+	height: 16px; /* Размер кольца */
+	border-radius: 50%; /* Круглая форма для кольца */
+	border: 2px solid #ccc; /* Цвет границы для невыбранного состояния */
+	background: white; /* Цвет фона кольца */
+}
+
+.custom-radio:after {
+	content: '';
+	position: absolute;
+	left: 4px; /* Отступ для центрирования точки */
+	top: 50%;
+	transform: translateY(-50%);
+	width: 8px; /* Размер точки */
+	height: 8px; /* Размер точки */
+	border-radius: 50%; /* Круглая форма для точки */
+	background: transparent; /* Цвет точки по умолчанию (прозрачный) */
+}
+
+input[type='radio']:checked + .custom-radio:before {
+	border-color: $dark; /* Цвет границы для отмеченного состояния */
+}
+
+input[type='radio']:checked + .custom-radio:after {
+	background: $main; /* Цвет точки для отмеченного состояния */
+}
+
+@media (max-width: 1280px) {
+	.checkout {
+		&__client_data {
+			&--wrapper {
+				padding: 30px 20px;
+
+				.woocommerce-billing-fields__field-wrapper {
+					flex-direction: column;
+				}
+
+				input[type='text'],
+				input[type='tel'],
+				input[type='email'] {
+					width: 100%;
+				}
+
+				input[type='text']#order_comments {
+					width: 100%;
+				}
+
+				#billing_country_field {
+					.select2-selection.select2-selection--single {
+						width: 100%;
+					}
+				}
+			}
+
+			&--title {
+				font-size: 18px;
+				line-height: 25.2px;
+				margin-bottom: 17px;
+			}
+		}
+
+		&__review_order {
+			padding: 30px 20px;
+		}
+	}
+}
+
+@include respond-to(mobile) {
+	.checkout {
+		.order__received {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 24px;
+
+			&--content {
+				&-title {
+					text-align: center;
+					font-size: 18px;
+					line-height: 23.4px;
+					margin-bottom: 24px;
+				}
+			}
+		}
+	}
+}

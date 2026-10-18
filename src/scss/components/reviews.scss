@@ -1,0 +1,38 @@
+@import '../variables';
+
+.reviews {
+	&__swiper {
+		width: 100%;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.swiper-wrapper {
+		height: 580px;
+	}
+
+	.swiper-slide {
+		background-position: center;
+		background-size: cover;
+		width: 300px;
+		height: 300px;
+	}
+
+	.swiper-slide img {
+		display: block;
+		height: 532px;
+		min-width: 269px;
+		object-fit: contain;
+	}
+
+	.swiper-slide {
+		opacity: 0.5; /* Боковые слайды полупрозрачны */
+		transition: all 0.3s ease; /* Плавный переход */
+		transform: scale(0.8) !important; /* Немного уменьшаем боковые слайды */
+	}
+
+	.swiper-slide-active {
+		transform: scale(1) !important;
+		opacity: 1; /* Полная непрозрачность */
+	}
+}

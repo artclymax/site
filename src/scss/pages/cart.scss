@@ -1,0 +1,185 @@
+@import '../variables';
+@import '../main/mixins';
+
+.cart-page {
+	&__empty_cart {
+		a {
+			color: $dark;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	form {
+		gap: 12px;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		gap: 24px;
+		background-color: #fff;
+		transition: background 0.2s;
+		padding: 15px 10px;
+		border: 1px solid #e0e0e0;
+
+		&:hover {
+			background-color: #f7f7f7;
+		}
+	}
+
+	&__img_title {
+		display: flex;
+		align-items: center;
+		gap: 36px;
+
+		&--img {
+			img {
+				max-width: 100px;
+				width: 96px;
+				height: auto;
+			}
+		}
+
+		&--title {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+
+			a {
+				color: $dark;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			.product__sku {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 130%;
+				color: #767676;
+				margin-top: 8px;
+			}
+		}
+	}
+
+	&__quantity_wrapper {
+		display: flex;
+
+		&--quantity {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.product-remove {
+				display: none;
+			}
+		}
+	}
+
+	&__price_wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: end;
+		gap: 8px;
+		width: 150px;
+
+		&--price {
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 130%;
+			text-align: center;
+			color: #ee0025;
+		}
+
+		&--regular_price {
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 19.6px;
+		}
+
+		&--remove_btn {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 19.6px;
+
+			a {
+				color: $dark;
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__update_cart {
+		display: flex;
+		justify-content: end;
+		margin-top: 32px;
+	}
+
+	&__result {
+		padding: 30px;
+		box-shadow: 0 2px 10px 0 #32324724;
+	}
+}
+
+@media (max-width: 1025px) {
+	.cart-page {
+		&__item {
+			flex-direction: column;
+		}
+
+		&__img_title {
+			align-items: start;
+
+			&--title {
+				max-width: max-content;
+			}
+		}
+
+		&__price_wrapper {
+			align-items: start;
+
+			&--remove_btn {
+				display: none;
+			}
+		}
+
+		&__quantity_wrapper {
+			display: flex;
+			gap: 36px;
+
+			&--quantity {
+				flex-direction: row;
+				gap: 33px;
+				order: 1;
+
+				.product-remove {
+					display: block;
+
+					a {
+						font-size: 55px;
+					}
+				}
+			}
+		}
+
+		&__update_cart {
+			.btn {
+				width: 100%;
+			}
+		}
+
+		&__result {
+			padding: 12px 6px;
+		}
+	}
+}

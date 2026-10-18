@@ -1,0 +1,151 @@
+@import '../variables';
+
+.o_kompanii {
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		.row.reverse {
+			flex-direction: row-reverse;
+		}
+
+		.col {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		> * {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+		}
+
+		h2 {
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 130%;
+			text-transform: uppercase;
+			margin-bottom: 24px;
+		}
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+
+		img {
+			height: auto;
+			object-fit: contain;
+		}
+	}
+}
+
+.page-o_kompanii {
+	.docs {
+		.swiper {
+			position: relative;
+			padding-bottom: 77px;
+
+			&-slide {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				row-gap: 10px;
+
+				&-img {
+					background-color: white;
+					border: 1px solid #d5d8d9;
+					border-radius: 6px;
+					padding: 12px 10px;
+				}
+
+				img {
+					max-height: 391px;
+					height: auto;
+					object-fit: contain;
+				}
+
+				.title {
+					font-weight: 700;
+					font-size: 16px;
+					line-height: 130%;
+					text-align: center;
+				}
+			}
+
+			&-pagination {
+				display: none;
+			}
+
+			.navigation {
+				display: flex;
+				justify-content: center;
+				margin-top: 44px;
+				gap: 12px;
+
+				.swiper-button {
+					&-prev,
+					&-next {
+						position: initial;
+						background-color: white;
+						width: 56px;
+						height: 56px;
+						border-radius: 50%;
+						box-shadow: -1px 1px 4px 0 #0000001a;
+
+						&:after {
+							content: '';
+							display: block;
+							width: 40px;
+							height: 40px;
+							background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6667 28.3307L25 19.9974L16.6667 11.6641' stroke='%232EB9F5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+						}
+					}
+
+					&-prev {
+						&::after {
+							transform: rotate(180deg);
+						}
+					}
+
+					&-disabled {
+						opacity: 0.6;
+					}
+				}
+			}
+		}
+
+		.btn {
+			display: flex;
+			justify-content: center;
+			margin-top: 64px;
+		}
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	.o_kompanii {
+		&__advantages {
+			margin-top: 24px;
+		}
+	}
+
+	.page-o_kompanii {
+		.docs {
+			.swiper {
+				padding-bottom: 24px;
+
+				&-pagination {
+					display: block;
+				}
+			}
+
+			.btn {
+				margin-top: 40px;
+			}
+		}
+	}
+}

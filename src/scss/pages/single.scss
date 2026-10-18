@@ -1,0 +1,40 @@
+@import '../variables';
+
+.single {
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		* {
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 140%;
+		}
+
+		ul {
+			list-style: disc;
+
+			li {
+				margin-left: 24px;
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	.img {
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 1025px) {
+	.single {
+		.content {
+			gap: 20px;
+
+			* {
+				font-size: 16px;
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+@import '../../variables';
+@import '../../main/mixins';
+
+.swiper {
+	&-pagination {
+		&-bullet {
+			background-color: $gray;
+
+			&-active {
+				background-color: $main;
+			}
+		}
+	}
+
+	.navigation {
+		.swiper-button {
+			&-prev,
+			&-next {
+				position: absolute;
+				background-color: white;
+				width: 56px;
+				height: 56px;
+				border-radius: 50%;
+				box-shadow: -1px 1px 4px 0 #0000001a;
+
+				&:after {
+					content: '';
+					display: block;
+					width: 40px;
+					height: 40px;
+					background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6667 28.3307L25 19.9974L16.6667 11.6641' stroke='%232EB9F5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+				}
+			}
+
+			&-prev {
+				&:after {
+					transform: rotate(180deg);
+				}
+			}
+
+			&-disabled {
+				opacity: 0.6;
+			}
+		}
+	}
+}

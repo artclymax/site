@@ -1,0 +1,30 @@
+@import '../../variables';
+
+.advantages__card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #e0e0e0;
+	background-color: $white;
+	padding: 20px 36px;
+	height: 100%;
+
+	&--title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 130%;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+@media (max-width: $tablet_max_width) {
+	.advantages__card {
+		padding: 20px 8px;
+
+		&--title {
+			font-size: 16px;
+		}
+	}
+}

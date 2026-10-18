@@ -1,0 +1,41 @@
+@import '../../variables';
+
+.news__card {
+	max-width: 384px;
+
+	&--img {
+		width: 100%;
+		max-height: 270px;
+		height: 100%;
+		object-fit: fill;
+	}
+
+	&--date {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 130%;
+		color: #a8a8a8;
+		margin-top: 16px;
+	}
+
+	&--title {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 130%;
+		color: $text-color;
+		margin-top: 10px;
+	}
+
+	&--excerpt {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 130%;
+		color: $text-color;
+		margin-top: 10px;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

@@ -1,0 +1,58 @@
+.cart_totals {
+	.shop_table {
+		width: 100%;
+	}
+
+	.regular-total,
+	.total-discount {
+		th {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 130%;
+			text-align: left;
+		}
+
+		td {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 130%;
+			text-align: right;
+		}
+	}
+
+	.regular-total {
+		th,
+		td {
+			padding-bottom: 10px;
+		}
+	}
+
+	.total-discount {
+		th,
+		td {
+			padding-bottom: 20px;
+		}
+	}
+
+	.order-total {
+		th {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 130%;
+			text-align: left;
+		}
+
+		td {
+			font-weight: 500;
+			font-size: 24px;
+			line-height: 130%;
+			color: #ee0025;
+			text-align: right;
+		}
+	}
+
+	.btn {
+		margin-top: 16px;
+		// width: auto;
+	}
+}

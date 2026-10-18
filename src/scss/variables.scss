@@ -1,0 +1,35 @@
+:root {
+	--theme-main-font: 'Open Sans', sans-serif;
+	--theme-second-font: 'Open Sans', sans-serif;
+}
+
+$container_max_width: 1288px;
+$container_max_width_tablet: 1044px;
+
+$container_padding_tablet: 28px;
+$container_padding_mobile: 10px;
+
+$container_padding: 44px;
+
+$header-height: 127px;
+
+$main: #0560d8;
+$main-hover: #0447aa;
+$gray: #d9d9d9;
+$gray-secondary: #f3f3f3;
+$bg-color: #fff;
+$dark: #343434;
+$text-color: #282828;
+$white: #fff;
+$footer-bg: #023563;
+
+// pagination
+$pagination-bg: $main;
+$pagination-border: $main;
+$burger-color: $main;
+
+$desktop_middle_width: 1279px;
+$tablet_max_width: 1279px;
+$tablet_min_width: 768px;
+$mobile_max_width: 767px;
+$mobile_middle_width: 474px;

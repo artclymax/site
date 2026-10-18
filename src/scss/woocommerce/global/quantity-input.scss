@@ -1,0 +1,44 @@
+@import '../../variables';
+
+.input-group {
+	display: flex;
+	border: 1px solid #e0e0e0;
+	width: 120px;
+
+	button {
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 28px;
+		text-align: center;
+		background-color: $white;
+		border: none;
+		transition: background 0.1s;
+
+		&:hover {
+			background-color: $main-hover;
+			color: $white;
+		}
+	}
+
+	input {
+		width: 45px;
+		height: 40px;
+		text-align: center;
+		padding-left: 0;
+		border: none;
+	}
+
+	input[type='number'] {
+		-moz-appearance: textfield;
+	}
+
+	/* Убираем стрелки в Chrome, Safari и Opera */
+	input[type='number']::-webkit-outer-spin-button,
+	input[type='number']::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+}

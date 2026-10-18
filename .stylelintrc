@@ -1,0 +1,14 @@
+{
+	"extends": ["stylelint-config-standard-scss"],
+	"rules": {
+		"selector-pseudo-element-colon-notation": "single",
+		"font-family-name-quotes": null,
+		"no-descending-specificity": null,
+		"at-rule-no-unknown": null,
+		"selector-class-pattern": null,
+		"alpha-value-notation": "number",
+		"color-function-notation": "legacy",
+		"no-invalid-double-slash-comments": null,
+		"media-feature-range-notation": null
+	}
+}

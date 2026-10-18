@@ -1,0 +1,27 @@
+.block {
+	padding: 66px 0;
+
+	&--bg {
+		background: #f7f7fa;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 100%;
+		letter-spacing: 0%;
+		margin-bottom: 44px;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.block {
+		padding: 25px 0;
+
+		&__title {
+			margin-bottom: 24px;
+			font-size: 28px;
+		}
+	}
+}
